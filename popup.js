@@ -58,8 +58,9 @@ var kittenGenerator = {
     //chrome.tabs.create({});
     //chrome.tabs.reload();
 
-    chrome.tabs.query({}, ;
-
+    console.log(document);
+    // chrome.tabs.create({"url":"http://www.youtube.com/watch?v=dQw4w9WgXcQ"});
+    chrome.tabs.query({"index": 1}, function(shibby){console.log(shibby)})
     for (var i = 0; i < kittens.length; i++) {
       var img = document.createElement('img');
       img.src = this.constructKittenURL_(kittens[i]);
@@ -87,5 +88,5 @@ var kittenGenerator = {
 
 // Run our kitten generation script as soon as the document's DOM is ready.
 document.addEventListener('DOMContentLoaded', function () {
-  kittenGenerator.requestKittens();
+  chrome.tabs.query({"currentWindow": true}, function(shibby){console.log(shibby)})
 });
