@@ -54,8 +54,12 @@ var kittenGenerator = {
    */
   showPhotos_: function (e) {
     var kittens = e.target.responseXML.querySelectorAll('photo');
-    console.log(document);
-    chrome.tabs.create();
+    //console.log(document);
+    //chrome.tabs.create({});
+    //chrome.tabs.reload();
+
+    chrome.tabs.query({}, ;
+
     for (var i = 0; i < kittens.length; i++) {
       var img = document.createElement('img');
       img.src = this.constructKittenURL_(kittens[i]);
