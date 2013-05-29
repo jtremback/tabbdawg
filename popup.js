@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-var console = chrome.extension.getBackgroundPage().console;
+// var console = chrome.extension.getBackgroundPage().console;
 
 /**
  * Global variable containing the query we'd like to pass to Flickr. In this
@@ -55,6 +55,7 @@ var kittenGenerator = {
   showPhotos_: function (e) {
     var kittens = e.target.responseXML.querySelectorAll('photo');
     console.log(document);
+    chrome.tabs.create();
     for (var i = 0; i < kittens.length; i++) {
       var img = document.createElement('img');
       img.src = this.constructKittenURL_(kittens[i]);
