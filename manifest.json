@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "Tabbdawg",
-  "description": "This shit is fucking epic.",
-  "version": "10000",
+  "description": "Testing tab stuff",
+  "version": "1",
 
   "browser_action": {
     "default_icon": "icon.png",
